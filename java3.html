@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javaScript - js03</title>
+    <script>
+        function saludar(){
+            alert("buenos dias");
+        }
+        function calcular(a,b){
+            alert(a*b);
+        }
+        function pintar(){
+            document.getElementById("txtemp").style.backgroundColor="red";
+        }
+        function limpiar(){
+            document.getElementById("txtemp").style.backgroundColor="white";
+        }
+        function imprimir(){
+            window.print();
+        }
+        function mostrar(){
+            document.getElementById("imagen").src="img/descarga.jpg";
+        }
+    </script>
+    <style>
+        button{
+            padding: 15px;
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: blue;
+            color:chocolate;
+        }
+        input{
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body onload="alert('evaluacion');">
+    <button onclick="saludar();">saludar</button>
+    <button onmousemove="calcular(10,20);">saludar</button>
+    <br>
+    empresa <br>
+    <input type="text" onfocus="pintar();" onblur="limpiar();"  placeholder="ingrese empresa" id="txtemp">
+    <br>
+    <button ondblclick="imprimir();">imprimir</button>
+    <button onclick="mostrar();">mostrar</button>
+    <div>
+        <img src="" id="imagen" alt="">
+    </div>
+</body>
+</html>

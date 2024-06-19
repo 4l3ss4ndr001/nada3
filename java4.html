@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript</title>
+    <link rel="stylesheet" href="CSS/java4.css">
+    <script>
+        function limpiar(){
+            document.getElementById("txtsol").value="";
+            document.getElementById("txtdol").value="";
+            document.getElementById("txtsol").focus();
+        }
+        function calcular(){
+            let xsol= document.getElementById("txtsol").value;
+            let xdol= (xsol/3.4).toFixed(2);
+            document.getElementById("txtdol").value=xdol;
+        }
+        function salir(){
+            window.open();
+        }
+    </script>
+</head>
+<body style="background-image: url('img/dolar.jpg'); background-size: cover">
+    <h1>CONVERTIR SOLES A DOLARES</h1>
+    <table>
+        <tr>
+            <td>
+                <img width="200%" src="img/imagen.jpg" alt="" style="text-align: center">
+            </td>
+        </tr>
+    </table>
+    
+
+    <table class="tablita">
+        <tr>
+            <td>monto en soles</td>
+            <td>
+                <input type="text" id="txtsol">
+            </td>
+        </tr>
+        <tr>
+            <td>importe en dolares</td>
+            <td>
+                <input type="text" id="txtdol" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calcular();">calcular</button>
+            </td>
+            <td>
+                <button onclick="limpiar();">limpiar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="salir()">salir</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
